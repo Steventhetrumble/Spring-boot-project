@@ -1,0 +1,32 @@
+package com.steve.main;
+
+public class Practice {
+	private String a;
+	
+	public Practice() {
+		
+	}
+	
+	public Practice(String a) {
+		this.a = a;
+	}
+	
+	public String getA() {
+		return this.a;
+	}
+	
+	public void setA(String a) {
+		this.a = a;
+	}
+	
+	public String toString() {
+		
+		
+		return "a";
+	}
+	public static void main(String[] args) {
+		Practice prac = new Practice("llo");
+		
+		System.out.println(prac.toString());
+	}
+}

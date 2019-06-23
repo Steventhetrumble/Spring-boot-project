@@ -1,0 +1,5 @@
+package com.steve.rest;
+
+public class SimpleRestController {
+
+}

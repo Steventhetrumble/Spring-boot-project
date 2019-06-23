@@ -1,0 +1,16 @@
+package com.steve.roman;
+
+import org.junit.jupiter.api.BeforeEach;
+
+public class RomanNumeralConverterTest {
+	
+	RomanNumeralConverter rnc;
+	
+	
+	@BeforeEach
+	public void setup() {
+		rnc = new RomanNumeralConverter();
+		
+		
+	}
+}

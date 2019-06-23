@@ -1,0 +1,55 @@
+package com.steve.roman;
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class RomanNumeralConverter implements NumberConverter{
+	
+	Map<String, Integer> characterValues = new HashMap<String, Integer>();
+	
+	public RomanNumeralConverter() {
+		characterValues.put("I", 1);
+		characterValues.put("V", 5);
+		characterValues.put("X", 10);
+		characterValues.put("L", 50);
+		characterValues.put("C", 100);
+	}
+	
+	@Override
+	public int convert(String s) {
+		int finalValue = 0;
+		int temporaryValue1 = 0;
+		int temporaryValue2 = 0;
+		
+		
+		
+		for(int i = 0; i < s.length() - 1;i++) {
+			if(i == s.length() -1) {
+				finalValue += characterValues.get(s.charAt(i));
+				return finalValue;
+			}
+			temporaryValue1 =  characterValues.get((s.charAt(i)));
+			temporaryValue2 =  characterValues.get((s.charAt(i+1)));
+			
+			if(temporaryValue1 < temporaryValue2) {
+				
+				finalValue += (temporaryValue2 - temporaryValue1);
+				i++;
+			}
+			else {
+				finalValue += temporaryValue1;
+				
+			}
+			
+			
+			
+		}
+		
+		
+			
+		return 0;
+	}
+
+	
+
+}
